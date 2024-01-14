@@ -9,7 +9,7 @@ onMounted(() => {
   axios
   .get('https://my-json-server.typicode.com/haridulai/api/events')
   .then((response) => {
-    console.log(response.data);
+    events.value = response.data;
   })
   .catch((error) => {
     console.log(error);
